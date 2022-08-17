@@ -9,60 +9,124 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
       integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
       crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css"
-      rel="stylesheet"
-      type="text/css"
-    />
+ 
 </head>
-<body class="bg-[#fbf7ed]">
-    <header class="bg-[#fbf7ed]  md:h-[15vh]  ">
-        <nav class="navbar md:px-24 md:py-4 bg-base-100 font-[poppins]">
-            <div class="navbar-start">
-              <a class="">
-                <svg version="1.1" id="Rode_Logo" class="w-[150px] h-[40px] lg:mt-[45px]   " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 792.9 220.2" xml:space="preserve" style="height: 24px;"><g><path d="M179.8,69.2c0-39.4-38.8-63.6-74.9-63.6H0v208.7h62.8V113.4l48.4,99.2l0.8,1.5h71.3l-49.8-87.8
-                  C162.2,118.2,179.8,96.5,179.8,69.2z M62.8,35.8h18.4c20,0,34,14.2,34,34.4c0,29.2-16.7,35-45.7,35h-6.9V35.8H62.8z"></path> <polygon points="717,181.1 717,123.8 785.4,123.8 785.4,90.5 717,90.5 717,39 789,39 789,5.6 654.3,5.6 654.3,214.3 792.9,214.3 
-                  792.9,181.1 	"></polygon> <path d="M525.4,5.6H433v208.7h101.9c62.5,0,102.8-39.4,102.8-100.5C637.4,51.1,590.3,5.6,525.4,5.6z M572.6,105.5
-                  c0,38.8-15.4,80.1-58.8,80.1h-20.9V34.2h18.8C553.8,34.2,572.6,70,572.6,105.5z"></path> <path d="M410.8,19.6L393.3,2.1l-21.5,21.5C353,8.9,328.8,0,302.3,0C240,0,191.4,48.3,191.4,110c0,26.7,9.2,50.9,24.6,69.8
-                  l-21.1,21.1l17.5,17.5l21.3-21.3c18.8,14.4,42.5,23.1,68.6,23.1c62.3,0,110.9-48.2,110.9-109.9c0-26.3-8.8-50.2-23.8-68.8
-                  L410.8,19.6z M302.4,27.3c19.4,0,30.7,12.7,37.3,28.6l-81.5,81.5c-1.5-10.4-1.9-20.4-1.9-27.5C256.3,85.2,260.9,27.3,302.4,27.3z
-                   M346.6,83.8c1.3,10,1.7,19.2,1.7,26.1c0,24.8-4.4,82.6-46.1,82.6c-19,0-30.2-12.1-36.9-27.7L346.6,83.8z"></path></g></svg>
+<body class="">
+  <!-- <header
+  class="flex  lg:justify-center lg:gap-40 gap-20   py-4 bg-gray-900/2   ">
+  <div class="logo ">
+    <div class="navbar-logo">
+        <svg class=" max-w-xl" version="1.1" id="Rode_Logo" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 792.9 220.2"
+            xml:space="preserve" style="height: 24px;">
+            <g>
+                <path
+                    d="M179.8,69.2c0-39.4-38.8-63.6-74.9-63.6H0v208.7h62.8V113.4l48.4,99.2l0.8,1.5h71.3l-49.8-87.8
+            C162.2,118.2,179.8,96.5,179.8,69.2z M62.8,35.8h18.4c20,0,34,14.2,34,34.4c0,29.2-16.7,35-45.7,35h-6.9V35.8H62.8z">
+                </path>
+                <polygon points="717,181.1 717,123.8 785.4,123.8 785.4,90.5 717,90.5 717,39 789,39 789,5.6 654.3,5.6 654.3,214.3 792.9,214.3 
+            792.9,181.1 	"></polygon>
+                <path d="M525.4,5.6H433v208.7h101.9c62.5,0,102.8-39.4,102.8-100.5C637.4,51.1,590.3,5.6,525.4,5.6z M572.6,105.5
+            c0,38.8-15.4,80.1-58.8,80.1h-20.9V34.2h18.8C553.8,34.2,572.6,70,572.6,105.5z"></path>
+                <path
+                    d="M410.8,19.6L393.3,2.1l-21.5,21.5C353,8.9,328.8,0,302.3,0C240,0,191.4,48.3,191.4,110c0,26.7,9.2,50.9,24.6,69.8
+            l-21.1,21.1l17.5,17.5l21.3-21.3c18.8,14.4,42.5,23.1,68.6,23.1c62.3,0,110.9-48.2,110.9-109.9c0-26.3-8.8-50.2-23.8-68.8
+            L410.8,19.6z M302.4,27.3c19.4,0,30.7,12.7,37.3,28.6l-81.5,81.5c-1.5-10.4-1.9-20.4-1.9-27.5C256.3,85.2,260.9,27.3,302.4,27.3z
+            M346.6,83.8c1.3,10,1.7,19.2,1.7,26.1c0,24.8-4.4,82.6-46.1,82.6c-19,0-30.2-12.1-36.9-27.7L346.6,83.8z">
+                </path>
+            </g>
+        </svg>
+    </div>
+</div>
+<div class="center flex  hidden lg:flex text-semibold text-md text-gray-500 ">
+    <a class="hover:text-black mr-10" href="#">PRODUCTS</a>
+    <a class="hover:text-black mr-10" href="#">USER GUIDES</a>
+    <a class="hover:text-black mr-10" href="#">SOLUTIONS</a>
+    <a class="hover:text-black mr-10" href="#">APPAREL</a>
+    <a class="hover:text-black mr-10" href="#">SUPPORT</a>
+</div>
+<div class="search ">
+    <button class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+    </button>
+</div>
+
+        </header> -->
+
+        <header class="bg-[#fbf7ed] h-[12vh] ">
+
+
+          <!-- nav -->
+          <nav class="flex justify-center items-center gap-40 pt-4 ">
+      
+            <div class="  pt-[20px] flex  justify-center items-center">
+              <svg class=" max-w-xl" version="1.1" id="Rode_Logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 792.9 220.2" xml:space="preserve" style="height: 24px;">
+                <g>
+                    <path d="M179.8,69.2c0-39.4-38.8-63.6-74.9-63.6H0v208.7h62.8V113.4l48.4,99.2l0.8,1.5h71.3l-49.8-87.8
+                C162.2,118.2,179.8,96.5,179.8,69.2z M62.8,35.8h18.4c20,0,34,14.2,34,34.4c0,29.2-16.7,35-45.7,35h-6.9V35.8H62.8z">
+                    </path>
+                    <polygon points="717,181.1 717,123.8 785.4,123.8 785.4,90.5 717,90.5 717,39 789,39 789,5.6 654.3,5.6 654.3,214.3 792.9,214.3 
+                792.9,181.1 	"></polygon>
+                    <path d="M525.4,5.6H433v208.7h101.9c62.5,0,102.8-39.4,102.8-100.5C637.4,51.1,590.3,5.6,525.4,5.6z M572.6,105.5
+                c0,38.8-15.4,80.1-58.8,80.1h-20.9V34.2h18.8C553.8,34.2,572.6,70,572.6,105.5z"></path>
+                    <path d="M410.8,19.6L393.3,2.1l-21.5,21.5C353,8.9,328.8,0,302.3,0C240,0,191.4,48.3,191.4,110c0,26.7,9.2,50.9,24.6,69.8
+                l-21.1,21.1l17.5,17.5l21.3-21.3c18.8,14.4,42.5,23.1,68.6,23.1c62.3,0,110.9-48.2,110.9-109.9c0-26.3-8.8-50.2-23.8-68.8
+                L410.8,19.6z M302.4,27.3c19.4,0,30.7,12.7,37.3,28.6l-81.5,81.5c-1.5-10.4-1.9-20.4-1.9-27.5C256.3,85.2,260.9,27.3,302.4,27.3z
+                M346.6,83.8c1.3,10,1.7,19.2,1.7,26.1c0,24.8-4.4,82.6-46.1,82.6c-19,0-30.2-12.1-36.9-27.7L346.6,83.8z">
+                    </path>
+                </g>
+            </svg>
+      
+            </div>
+      
+            <div class="center flex gap-10 hidden pt-[20px] lg:flex items-center text-semibold text-md  text-gray-500  justify-center">
+              <a class=" text-gray-600 font-[600] hover:text-gray-900 flex">Products
               </a>
+              <a class="mr-5 ml-5 text-gray-600 font-[600] hover:text-gray-900 flex">User Guides
+                </a>
+              <a class="mr-5 ml-5 text-gray-600 font-[600] hover:text-gray-900 flex">Solutions
+                </a>
+              <a class="mr-5 ml-5 text-gray-600 font-[600] hover:text-gray-900 flex">Apparel
+                </a>
+                <a class="mr-5 ml-5 text-gray-600 font-[600] hover:text-gray-900 flex">Support
+                </a>
             </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal space-x-1 p-0">
-                <li tabindex="0">
-                  
-                  <a class="font-semibold text-lg">Products</a>
-              
-                </li>
-                <li tabindex="0">
-                  <a class="font-semibold text-lg">User Guides</a>
-              
-                </li>
-                <li tabindex="0">
-                  <a class="font-semibold text-lg">Market</a>
-                
-                </li>
-                <li tabindex="0">
-                  <a class="font-semibold text-lg">Manage</a>
-             
-                </li>
-   
-              </ul>
+      
+            <div class="center flex gap-10 hidden pt-[20px] lg:flex items-center text-semibold text-md  text-gray-500  justify-center">
+              <svg data-v-084759c0="" width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.4629 20.0231C15.6892 20.0231 19.9259 15.7646 19.9259 10.5115C19.9259 5.25846 15.6892 1 10.4629 1C5.2367 1 1 5.25846 1 10.5115C1 15.7646 5.2367 20.0231 10.4629 20.0231Z" stroke="#484848" stroke-width="2" stroke-miterlimit="10"></path> <path d="M17.6455 17.6025L26.0002 26.0001" stroke="#484848" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round"></path></svg>
             </div>
-            <div class="navbar-end  ">
-              <a
-                class="flex items-center font-semibold bg-skycolor hover:bg-darkbluecolor cursor-pointer text-sm lg:text-base p-1 text-white pl-4 border-none rounded-full "
-              >
-                <span>Sign In</span>
-                <img class="ml-1" src="https://assetscdn1.paytm.com/frontendcommonweb/9a65db05.svg" alt="" />
-              </a>
-            </div>
+      
+      
+      
           </nav>
+           
+      
+        </header>
+          <section class=" bg-black w-full flex lg:flex-row flex-col justify-center items-center ">
+            <div class="images">
+              <img src="./images/1.jpg" class="h-50" alt="">
+            </div>
+            <div class="content mt-8 md:ml-28 mb-12 ">
+              <div class=" flex flex-col items-center">
+                  <img class="lg:h-12 " src="./images/1here.svg" alt="">
+                  <h1 class="text-white font-bold mt-12 text-xl lg:text-3xl">The Revolution Is Here</h1>
+                   <p class="text-white text-center leading-tight md:mt-10 md:w-[500px] hi">The RØDECaster Pro II is the world's most powerful all-in-one audio solution for streamers, podcasters, musicians, and creators. Take your content to the next level.</p>
 
-    </header>
-
+              </div>
+              <div class=" flex justify-center items-center buttons mt-12 mb-12">
+                <a class="  text-orange-400 text-bold text-lg    mr-4  ">LEARN MORE </a>
+                <i class=" border-solid border-white border-r-4 border-b-4 border-t-0 border-l-0 inline-block p-1   rotate-[310deg]"></i>
+                <button
+                    class=" ml-10 text-bold  text-white lg:text-sm bg-[#ad9970] px-7 py-3 rounded-full hover:bg-white hover:text-gray-600 text-xl">
+                    <a class="" href="#">BUY NOW</a>
+                </button>
+            </div>
+          </div>
+          </section>
 
 </body>
 </html>
